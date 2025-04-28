@@ -118,8 +118,8 @@ CYCLE_PIPELINE/
 
 | Model               | Word Error Rate (WER) | Character Error Rate (CER) |
 |---------------------|----------------------|---------------------------|
-| Large-xlsr-53       | XX%                  | XX%                       |
-| Large-960h-atcosim  | XX%                  | XX%                       |
+| Large-xlsr-53                    | 91.4%                  | 52.8%                       |
+| Large-960h-atcosim (fine-tined)  | 16.5​%                  | 9.8%                        |
 | BART Correction     | **↓ Significant Reduction** | **↓ Improved Accuracy** |
 
 > 📁 Full results and tables available in the `/Results` directory.
@@ -186,6 +186,4 @@ If you use this work, please cite:
 ```
 
 ---
-
-*Designed to improve transcription accuracy where it matters most — in the skies above us.* ✈️
 
