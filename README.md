@@ -97,7 +97,7 @@ CYCLE_PIPELINE/
 
 - 📦 **Noise Reduction:** Stationary noise threshold = 1.5 std dev (`noisereduce`)
 - 🎚️ **Volume Normalization:** `pydub`
-- ✂️ **Snippet Slicing:** Configurable time windows
+- ✂️ **Snippet Slicing:** Configurable time windows based on vocal presence
 
 ---
 
@@ -118,11 +118,11 @@ CYCLE_PIPELINE/
 
 | Model               | Word Error Rate (WER) | Character Error Rate (CER) |
 |---------------------|----------------------|---------------------------|
-| Large-xlsr-53                    | 91.4%                  | 52.8%                       |
-| Large-960h-atcosim (fine-tined)  | 16.5​%                  | 9.8%                        |
-| BART Correction     | **↓ Significant Reduction** | **↓ Improved Accuracy** |
+| Baseline                          | 49.3%                  | 28.3%                       |
+| Large-960h-atcosim (pre-finetued) | 16.5​%                  | 9.8%                        |
+| BART Correction                   | **8.7%** | **6.8%** |
 
-> 📁 Full results and tables available in the `/Results` directory.
+> 📁 Full results and tables available in the `/cycle_pipeline/Results` directory.
 
 ---
 
@@ -150,6 +150,11 @@ python download_v2t_model.py
 ```bash
 python evaluate_bart.py --config configs/eval_config.json
 ```
+
+---
+
+## Pipeline Setup
+If you'd like to recreate these results using the same data and models follow these instructions.
 
 ---
 
